@@ -1,3 +1,4 @@
+import Enjoy from "@/components/ui/Enjoy";
 import HeroBanner from "@/components/ui/Hero";
 import MovieCarousel from "@/components/ui/MovieCarousel";
 
@@ -16,6 +17,8 @@ const page = () => {
                     <MovieCarousel />
                 </div>
             </div>
+
+            <Enjoy />
         </div>
     );
 };
