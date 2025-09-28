@@ -1,7 +1,9 @@
+import HeroBanner from "@/components/ui/Hero";
+
 const page = () => {
     return (
         <div>
-            <h1>This is Homepage</h1>
+            <HeroBanner />
         </div>
     );
 };
