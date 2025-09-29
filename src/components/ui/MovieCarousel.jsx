@@ -7,6 +7,7 @@ import { Autoplay } from 'swiper/modules';
 
 
 import 'swiper/css';
+import Link from 'next/link';
 
 const sampleMovies = [
     {
@@ -88,29 +89,31 @@ const MovieCarousel = () => {
             >
                 {sampleMovies.map((movie, index) => (
                     <SwiperSlide key={`${movie.id}-${index}`}>
-                        <div
-                            className="relative rounded-2xl overflow-hidden transition-all duration-500 cursor-pointer group swiper-slide-card"
-                        >
-                            <Image
-                                src={`https://image.tmdb.org/t/p/w500${movie.posterPath}`}
-                                alt={movie.title}
-                                fill
-                                className="object-cover"
-                                sizes="(max-width: 768px) 256px, 256px"
-                            />
+                        <Link href={`/movies/${movie.id}`}>
+                            <div
+                                className="relative rounded-2xl overflow-hidden transition-all duration-500 cursor-pointer group swiper-slide-card"
+                            >
+                                <Image
+                                    src={`https://image.tmdb.org/t/p/w500${movie.posterPath}`}
+                                    alt={movie.title}
+                                    fill
+                                    className="object-cover"
+                                    sizes="(max-width: 768px) 256px, 256px"
+                                />
 
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
 
-                            <div className="absolute -bottom-0 left-0 right-0">
-                                <div className="backdrop-blur-xs bg-black/20 border border-white/20 p-2">
-                                    <h3 className="text-white font-bold text-lg text-center leading-tight">
-                                        {movie.title}
-                                    </h3>
+                                <div className="absolute -bottom-0 left-0 right-0">
+                                    <div className="backdrop-blur-xs bg-black/20 border border-white/20 p-2">
+                                        <h3 className="text-white font-bold text-lg text-center leading-tight">
+                                            {movie.title}
+                                        </h3>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div className="absolute inset-0 bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                        </div>
+                                <div className="absolute inset-0 bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                            </div>
+                        </Link>
                     </SwiperSlide>
                 ))}
             </Swiper>

@@ -435,7 +435,7 @@ const page = () => {
             <Enjoy />
 
             {/* Movies You Rated */}
-            <div className="pt-20 pb-15 bg-[#06090C]">
+            <div className="pt-20 pb-15 bg-[#06090C] ">
                 <h2 className="text-4xl text-center font-extrabold">
                     <span className="text-yellow-500">MOVIES YOU</span>
                     <span className="text-[#0399FA]"> RATED</span>
@@ -452,7 +452,7 @@ const page = () => {
             </div>
 
             {/* Your Watch-List */}
-            <div className="pt-20 pb-15 relative min-h-[600px]">
+            <div className="pt-20 pb-15 relative min-h-[700px]">
                 <div className="absolute inset-0 -z-10">
                     <Image
                         src="/images/spider man.jpg"

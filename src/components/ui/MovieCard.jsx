@@ -14,8 +14,8 @@ const MovieCard = ({
     fromWatchlist
 }) => {
     return (
-        <div className={`bg-gray-800 rounded-2xl overflow-hidden transition-all duration-500 cursor-pointer group swiper-slide-card ${className}`}>
-            <div className="relative aspect-[3/4] overflow-hidden">
+        <div className={`bg-gray-800 rounded-2xl overflow-hidden transition-all duration-500 cursor-pointer group swiper-slide-card ${className} min-h-[480px] flex flex-col`}>
+            <div className="relative aspect-[3/4] overflow-hidden flex-shrink-0">
                 <Image
                     src={`https://image.tmdb.org/t/p/w500${movie.posterPath}`}
                     alt={movie.title}
@@ -27,15 +27,14 @@ const MovieCard = ({
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
 
-            <div className="p-2 space-y-3">
-                <h3
-                    className="text-white font-bold text-lg leading-tight hover:text-blue-400 transition-colors cursor-pointer h-12 flex items-start"
-                    onClick={() => onCardClick && onCardClick(movie)}
-                >
-                    {movie.title}
-                </h3>
-
+            <div className="p-3 flex-grow flex flex-col justify-between">
                 <div className="space-y-2">
+                    <h3
+                        className="text-white font-bold text-lg leading-tight hover:text-blue-400 transition-colors cursor-pointer min-h-[2.5rem] flex items-start"
+                    >
+                        {movie.title}
+                    </h3>
+
                     {showRating && movie.rating && (
                         <div className="flex items-center space-x-2">
                             <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -77,12 +76,8 @@ const MovieCard = ({
                     )}
                 </div>
 
-                <div className="space-y-2">
+                <div className="space-y-2 mt-auto">
                     <button
-                        onClick={(e) => {
-                            e.stopPropagation();
-                            onWatchlistClick && onWatchlistClick(movie);
-                        }}
                         className="w-[90%] mx-auto rounded-full bg-gradient-to-r from-[#57b4f1] to-blue-600 hover:bg-blue-700 text-white py-2 px-4 font-medium text-sm transition-colors flex items-center justify-center space-x-2 cursor-pointer"
                     >
                         {movie?.isInWatchlist || fromWatchlist ?
@@ -98,10 +93,6 @@ const MovieCard = ({
 
                     {showTrailerButton && (
                         <button
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                onTrailerClick && onTrailerClick(movie);
-                            }}
                             className="w-full text-white py-2 px-1 font-medium text-sm transition-colors flex items-center justify-left space-x-2"
                         >
                             <FiPlayCircle size={20} />
