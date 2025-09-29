@@ -1,3 +1,4 @@
+import TopCast from "@/components/ui/TopCast";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
 import { FiPlayCircle } from "react-icons/fi";
@@ -109,6 +110,105 @@ const sampleMovies = [
     }
 ];
 
+const sampleCastData = [
+    {
+        id: 1,
+        name: "Iñaki Godoy",
+        character: "Monkey D Luffy",
+        profilePath: null,
+        episodeCount: 9,
+        year: 2023
+    },
+    {
+        id: 2,
+        name: "Emily Rudd",
+        character: "Nami",
+        profilePath: null,
+        episodeCount: 9,
+        year: 2023
+    },
+    {
+        id: 3,
+        name: "Mackenyu",
+        character: "Roronoa Zoro",
+        profilePath: null,
+        episodeCount: 9,
+        year: 2023
+    },
+    {
+        id: 4,
+        name: "Jacob Romero Gibson",
+        character: "Usopp",
+        profilePath: null,
+        episodeCount: 9,
+        year: 2023
+    },
+    {
+        id: 5,
+        name: "Taz Skylar",
+        character: "Sanji",
+        profilePath: null,
+        episodeCount: 9,
+        year: 2023
+    },
+    {
+        id: 6,
+        name: "Peter Gadiot",
+        character: "Shanks",
+        profilePath: null,
+        episodeCount: 5,
+        year: 2023
+    },
+    {
+        id: 7,
+        name: "Morgan Davies",
+        character: "Koby",
+        profilePath: null,
+        episodeCount: 8,
+        year: 2023
+    },
+    {
+        id: 8,
+        name: "Ilia Isorelýs Paulino",
+        character: "Alvida",
+        profilePath: null,
+        episodeCount: 3,
+        year: 2023
+    },
+    {
+        id: 9,
+        name: "Iñaki Godoy",
+        character: "Monkey D Luffy",
+        profilePath: null,
+        episodeCount: 9,
+        year: 2023
+    },
+    {
+        id: 10,
+        name: "Emily Rudd",
+        character: "Nami",
+        profilePath: null,
+        episodeCount: 9,
+        year: 2023
+    },
+    {
+        id: 11,
+        name: "Mackenyu",
+        character: "Roronoa Zoro",
+        profilePath: null,
+        episodeCount: 9,
+        year: 2023
+    },
+    {
+        id: 12,
+        name: "Jacob Romero Gibson",
+        character: "Usopp",
+        profilePath: null,
+        episodeCount: 9,
+        year: 2023
+    },
+];
+
 export default async function DetailsPage({ params }) {
     const { id } = await params;
 
@@ -201,6 +301,12 @@ export default async function DetailsPage({ params }) {
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div className="py-40">
+                    <TopCast
+                        cast={sampleCastData}
+                    />
                 </div>
             </div>
         </div>
