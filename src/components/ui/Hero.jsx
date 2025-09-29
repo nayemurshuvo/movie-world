@@ -89,7 +89,6 @@ const HeroBanner = () => {
                             <div className="relative z-10 h-full flex items-center">
                                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                                        {/* Text Content */}
                                         <div className="max-w-2xl text-left">
                                             <div className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0399FA] mb-6 space-y-4">
                                                 <h1>BEST WAY OF</h1>
@@ -105,7 +104,6 @@ const HeroBanner = () => {
 
                                         <div className="hidden lg:flex justify-center items-center relative">
                                             <div className="relative w-80 h-[480px] animate-fadeIn">
-                                                {/* Left Arrow */}
                                                 <button className="hero-button-prev cursor-pointer absolute -left-7 top-1/2 transform -translate-y-1/2 bg-white hover:bg-white/70 text-blue-500 p-3 rounded-lg transition-all z-30 backdrop-blur-sm">
                                                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -119,14 +117,12 @@ const HeroBanner = () => {
                                                     priority={index === 0}
                                                 />
                                                 <div className="absolute inset-0 rounded-xl ring-1 ring-white/20" />
-                                                {/* Right Arrow */}
                                                 <button className="hero-button-next cursor-pointer absolute -right-7 top-1/2 transform -translate-y-1/2 bg-white hover:bg-white/70 text-blue-500 p-3 rounded-lg transition-all z-30 backdrop-blur-sm">
                                                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                                     </svg>
                                                 </button>
                                             </div>
-                                            {/* Watch Now */}
                                             <button className="cursor-pointer absolute left-45 -bottom-12 bg-gradient-to-r from-[#57b4f1] to-blue-600 text-white font-semibold text-lg transform -translate-y-1/2 px-16 py-3 rounded-full transition-all z-30 backdrop-blur-sm">
                                                 WATCH NOW
                                             </button>

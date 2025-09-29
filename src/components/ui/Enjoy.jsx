@@ -6,7 +6,7 @@ export default function Enjoy() {
         <section className="relative h-[80vh] min-h-[700px] overflow-hidden">
             <div className="absolute inset-0">
                 <Image
-                    src="/images/spider man.jpg"
+                    src="/images/suicide squad.jpg"
                     alt="Background"
                     fill
                     className="object-cover"
