@@ -4,6 +4,7 @@ import Enjoy from "@/components/ui/Enjoy";
 import HeroBanner from "@/components/ui/Hero";
 import MovieCarousel from "@/components/ui/MovieCarousel";
 import MovieSection from "@/components/ui/MovieSection";
+import MyAddedMovies from "@/components/ui/MyAddedMovies";
 import Image from "next/image";
 
 const ratedMovies = [
@@ -370,6 +371,33 @@ const watchlistMovies = [
     }
 ];
 
+const myAddedMovies = [
+    {
+        id: 14,
+        title: "Dune: Part Two",
+        posterPath: "/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg",
+        releaseYear: 2024,
+        genre: "Sci-Fi",
+        duration: "2h 46m",
+        description: "Paul Atreides unites with Chani and the Fremen while seeking revenge.",
+        director: "Denis Villeneuve",
+        cast: ["Timothée Chalamet", "Zendaya", "Rebecca Ferguson"],
+        rating: 4.9,
+    },
+    {
+        id: 15,
+        title: "Fast X",
+        posterPath: "/fiVW06jE7z9YnO4trhaMEdclSiC.jpg",
+        releaseYear: 2023,
+        genre: "Action",
+        duration: "2h 21m",
+        description: "Dom Toretto faces his most lethal adversary yet.",
+        director: "Louis Leterrier",
+        cast: ["Vin Diesel", "Jason Momoa", "Michelle Rodriguez"],
+        rating: 5.3,
+    }
+];
+
 const page = () => {
     const handleMovieClick = (movie) => {
         console.log('Movie clicked:', movie);
@@ -403,6 +431,7 @@ const page = () => {
                 </div>
             </div>
 
+            {/* Enjoy It */}
             <Enjoy />
 
             {/* Movies You Rated */}
@@ -455,6 +484,16 @@ const page = () => {
                         fromWatchlist={true}
                     />
                 </div>
+            </div>
+
+            {/* My Added Movies */}
+            <div className="pt-20 pb-15 bg-[#06090C]">
+                <h2 className="text-4xl text-center font-extrabold">
+                    <span className="text-[#0399FA]">MY ADDED </span>
+                    <span className="text-yellow-500">MOVIES</span>
+                </h2>
+
+                <MyAddedMovies movies={myAddedMovies} />
             </div>
 
         </div>
